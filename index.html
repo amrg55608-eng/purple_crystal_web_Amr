@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10091d">
+  <title>PURPLE CRYSTAL | Conditional Execution</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <main class="app-shell">
+    <header class="topbar">
+      <div><div class="brand">◈ PURPLE CRYSTAL</div><div class="subtitle">PYTHON / CONDITIONAL EXECUTION</div></div>
+      <div class="chip">TRAINING MODE <span class="pulse"></span></div>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow">YOUR NEXT CHALLENGE AWAITS</div>
+      <h1>Think in <span>conditions.</span><br>Level up your logic.</h1>
+      <p>60 questions • 3 difficulty levels • instant feedback</p>
+      <button id="startBtn" class="primary start-btn">START TRAINING <span>↗</span></button>
+    </section>
+
+    <section id="quizPanel" class="quiz-panel hidden" aria-live="polite">
+      <div class="stats">
+        <div class="stat"><span>QUESTION</span><strong id="questionCount">01 / 60</strong></div>
+        <div class="stat"><span>LEVEL</span><strong id="levelCount">01</strong></div>
+        <div class="stat"><span>SCORE</span><strong id="scoreCount">0 PTS</strong></div>
+        <div class="stat"><span>CORRECT</span><strong id="correctCount">0</strong></div>
+      </div>
+      <div class="progress-track"><div id="progressBar" class="progress-bar"></div></div>
+      <article class="question-card">
+        <div class="question-head"><span class="terminal-label">>>> CHALLENGE_TERMINAL</span><span id="typeChip" class="type-chip">MULTIPLE CHOICE</span></div>
+        <div class="level-tag" id="levelTag">LEVEL 1</div>
+        <div class="question-languages"><h2 id="questionText"></h2><p id="questionTranslation" lang="ar" dir="rtl"></p></div>
+        <div id="options" class="options"></div>
+        <textarea id="essayInput" class="essay-input hidden" rows="5" placeholder="Type your answer here..."></textarea>
+        <div id="feedback" class="feedback hidden"></div>
+        <div class="question-actions">
+          <span id="statusText" class="status-text">SYSTEM READY // Choose your answer</span>
+          <button id="actionBtn" class="primary">CHECK ANSWER ↵</button>
+        </div>
+      </article>
+    </section>
+
+    <section id="resultsPanel" class="results-panel hidden">
+      <div class="crystal-mark">◈</div>
+      <div class="eyebrow">SESSION COMPLETE</div>
+      <h2 id="resultTitle">CRYSTAL MASTER</h2>
+      <div id="finalScore" class="final-score">0 <small>PTS</small></div>
+      <p id="resultSummary"></p>
+      <div class="result-grid">
+        <div><span>Correct</span><strong id="resultCorrect">0</strong></div>
+        <div><span>Needs review</span><strong id="resultWrong">0</strong></div>
+        <div><span>Accuracy</span><strong id="resultAccuracy">0%</strong></div>
+      </div>
+      <button id="restartBtn" class="primary">PLAY AGAIN ↻</button>
+    </section>
+    <footer><span>◈ PURPLE CRYSTAL</span><span>Built for practice • No account required</span></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
